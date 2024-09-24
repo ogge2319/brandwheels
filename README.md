@@ -13,4 +13,4 @@ Struktur för hemsidan:
 1. Main sida, image slider med bilmärkena
 2. about, kontakt information
 3. Alla i gruppen ansvarar för en sida med deras bilmärke
-4. 
+4. Varje bilmärke ska ha 4st bilar 
