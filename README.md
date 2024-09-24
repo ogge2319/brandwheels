@@ -7,7 +7,7 @@ Oscar ansvarar för Audi
 Steven ansvarar för Dodge
 
 Verksamhetsbeskrivning:
-Uthyrning av utvalda bilmärken inom Sverige
+Uthyrning av utvalda bilmärken inom Sverige. Vi är ett nystartat biluthyrningsföretag som erbjuder en rad av olika sorters bilar av olika märken.
 
 Struktur för hemsidan:
 1. Main sida, image slider med bilmärkena
