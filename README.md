@@ -1,5 +1,7 @@
 # brandwheels
 
+Skapa en mall för main sidan och sin egna undersida på wireframe. Wireframe.cc
+
 Biluthyrningssida med olika märken av bilar.
 Yassin ansvarar för BMW
 Ivan ansvarar för Volvo
