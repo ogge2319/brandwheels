@@ -1,0 +1,262 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: #DCDCDC;
+    font-family: "roboto", sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #71797E;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: #71797E;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+footer a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #B0B0B0;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.footer-column-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    gap: 10px;
+    justify-content: end;
+}
+
+.footer-column-icons a:hover img {
+    filter: brightness(1.2);
+    transition: filter 0.3s ease;
+}
+
+/* Meny knapp */
+.dropdown {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+.dropbtn {
+    background-color: #71797E;
+    color: white;
+    padding: 15px 15px 17px;
+    font-size: 36px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dropdown-content {
+    display: none;
+    right: 0;
+    background-color: #71797E;
+    min-width: 160px;
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 6px;
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #A9A9A9;
+    color: black;
+}
+
+#toggle-menu:checked+.dropbtn+.dropdown-content {
+    display: block;
+}
+
+/* För telefoner */
+@media (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    header {
+        font-size: 24px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .dropbtn {
+        font-size: 18px;
+        padding: 10px 12px;
+    }
+    .dropdown-content{
+        position: absolute;
+        z-index: 100;
+    }
+}
+
+/* För surfplattor */
+@media (max-width: 960px) and (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    header {
+        font-size: 24px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .dropbtn {
+        font-size: 18px;
+        padding: 10px 12px;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        z-index: 100;
+    }
+}
+
+
+/* För mindre desktop */
+@media (max-width: 1200px) and (min-width: 960px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        
+    }
+
+    header {
+        font-size: 24px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .dropbtn {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .dropdown-content {
+        position: absolute;
+        z-index: 100;
+    }
+    
+}
+
+/* För större desktop */
+@media (min-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    header {
+        font-size: 36px;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .dropbtn {
+        font-size: 24px;
+        padding: 4px;
+        padding-bottom: 0%;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        z-index: 100;
+    }
+}
