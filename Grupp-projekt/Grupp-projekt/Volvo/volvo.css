@@ -1,0 +1,270 @@
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #dcdcdc;
+  font-family: "roboto", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr auto;
+  position: absolute;
+  gap: 20px;
+  min-height: 100vh;
+}
+
+header {
+  font-family: "roboto", 'Times New Roman', Times, serif;
+  grid-area: header;
+  background-color: #71797E;
+  color: #ffc033;
+  padding: 15px;
+  text-align: center;
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.bil1,
+.bil2,
+.bil3,
+.bil4 {
+  grid-column: span 1;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+.bil1 {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+.bil2 {
+  grid-column: 3 / 4;
+  grid-row: 1;
+}
+
+.bil3 {
+  grid-column: 2 / 3;
+  grid-row: 5;
+}
+
+.bil4 {
+  grid-column: 3 / 4;
+  grid-row: 5;
+}
+
+/* Car pictures */
+
+.bil1 img,
+.bil2 img,
+.bil3 img,
+.bil4 img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.bil1 {
+  height: 500px;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bil1 {
+  display: block;
+  margin: 0 auto;
+}
+
+.bil2 {
+  width: 500px;
+  align-items: center;
+}
+
+.bil2 {
+  display: block;
+  margin: 0 auto;
+}
+
+.bil3 {
+  width: 500px;
+  align-items: center;
+}
+
+.bil3 {
+  display: block;
+  margin: 0 auto;
+}
+
+.bil4 {
+  width: 500px;
+  align-items: center;
+}
+
+.bil4 {
+  display: block;
+  margin: 0 auto;
+}
+
+ul>li {
+  list-style: none;
+}
+
+.logo {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  width: 200px;
+  height: auto;
+  
+}
+
+/* Dropdown-menu */
+
+.dropdown {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+.dropbtn {
+  background-color: #71797E;
+  color: white;
+  padding: 15px 15px 17px;
+  font-size: 36px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dropdown-content {
+  display: none;
+  right: 0;
+  background-color: #71797E;
+  min-width: 160px;
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 6px;
+  text-decoration: none;
+  display: block;
+  font-size: 24px;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 100;
+}
+
+.dropdown-content a:hover {
+  background-color: #A9A9A9;
+  color: black;
+}
+
+#toggle-menu:checked+.dropbtn+.dropdown-content {
+  display: block;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  background-color: #71797E;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+footer a {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #B0B0B0;
+}
+
+footer a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact a {
+  margin-bottom: 10px;
+  color: white;
+
+}
+
+.footer-contact p {
+  margin-bottom: 30px;
+
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.footer-column-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  gap: 10px;
+  justify-content: end;
+}
+
+.footer-column-icons img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-column-icons a:hover img {
+  filter: brightness(1.2);
+  transition: filter 0.3s ease;
+}
