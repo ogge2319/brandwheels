@@ -3,10 +3,44 @@ body {
     height: 100%;
     margin: 0;
 }
+
 body {
     background-color: #DCDCDC;
     font-family: "roboto", sans-serif;
 }
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.hyr h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hyr img.hyr-rs6 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hyr img.hyr-xc90 {
+    max-width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hyr img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7); 
+}
+
 .container {
     display: grid;
     grid-template-areas:
@@ -23,7 +57,7 @@ header {
     font-family: "roboto", 'Times New Roman', Times, serif;
     grid-area: header;
     background-color: #71797E;
-    color: white;
+    color: #ffc033;
     padding: 15px;
     text-align: center;
     font-size: 48px;
@@ -32,6 +66,7 @@ header {
     align-items: center;
     position: relative;
 }
+
 footer {
     grid-area: footer;
     display: grid;
@@ -85,9 +120,10 @@ footer p {
     filter: brightness(1.2);
     transition: filter 0.3s ease;
 }
+
 .footer-column-icons img {
     width: 50px;
-    height: 50px; 
+    height: 50px;
 }
 
 /* Meny knapp */
@@ -128,6 +164,7 @@ footer p {
     display: block;
     font-size: 24px;
     transition: background-color 0.3s, color 0.3s;
+    z-index: 100;
 }
 
 .dropdown-content a:hover {
@@ -136,6 +173,10 @@ footer p {
 }
 
 #toggle-menu:checked+.dropbtn+.dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -149,6 +190,9 @@ footer p {
     header {
         font-size: 24px;
     }
+    .hyr h1 {
+        font-size: 32px;
+    }
 
     main {
         grid-template-columns: 1fr;
@@ -161,9 +205,10 @@ footer p {
 
     .dropbtn {
         font-size: 18px;
-        padding: 10px 12px;
+        padding: 3px;
     }
-    .dropdown-content{
+
+    .dropdown-content {
         position: absolute;
         z-index: 100;
     }
@@ -175,6 +220,9 @@ footer p {
         grid-template-columns: 1fr;
         gap: 15px;
     }
+    .hyr h1 {
+        font-size: 32px;
+    }
 
     main {
         grid-template-columns: 1fr;
@@ -191,7 +239,7 @@ footer p {
 
     .dropbtn {
         font-size: 18px;
-        padding: 10px 12px;
+        padding: 2px;
     }
 
     .dropdown-content {
@@ -200,18 +248,20 @@ footer p {
     }
 }
 
-
 /* För mindre desktop */
 @media (max-width: 1200px) and (min-width: 960px) {
     .container {
         grid-template-columns: repeat(4, 1fr);
         gap: 15px;
     }
+    .hyr h1 {
+        font-size: 32px;
+    }
 
     main {
         grid-template-columns: repeat(4, 1fr);
         gap: 15px;
-        
+
     }
 
     header {
@@ -224,13 +274,34 @@ footer p {
 
     .dropbtn {
         font-size: 18px;
-        padding: 10px;
+        padding: 5px;
     }
+
     .dropdown-content {
         position: absolute;
         z-index: 100;
     }
-    
+
+    .bil1 {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .bil2 {
+        grid-column: 3 / 5;
+        grid-row: 1;
+    }
+
+    .bil3 {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    .bil4 {
+        grid-column: 3 / 5;
+        grid-row: 2;
+    }
+
 }
 
 /* För större desktop */
@@ -238,6 +309,9 @@ footer p {
     .container {
         grid-template-columns: repeat(4, 1fr);
         gap: 15px;
+    }
+    .hyr h1 {
+        font-size: 32px;
     }
 
     main {
@@ -263,5 +337,25 @@ footer p {
     .dropdown-content {
         position: absolute;
         z-index: 100;
+    }
+
+    .bil1 {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+
+    .bil2 {
+        grid-column: 3 / 4;
+        grid-row: 1;
+    }
+
+    .bil3 {
+        grid-column: 2 / 3;
+        grid-row: 2;
+    }
+
+    .bil4 {
+        grid-column: 3 / 4;
+        grid-row: 2;
     }
 }
